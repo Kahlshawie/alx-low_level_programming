@@ -11,10 +11,9 @@ int main(void)
 int c;
 
 for (c = 97; c < 123; c++)
-{
-if (c != 101 && c != 113)
 putchar(c);
-}
+for (c = 65; c < 91; c++)
+putchar(c);
 putchar('\n');
 return (0);
 }
