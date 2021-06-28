@@ -1,23 +1,21 @@
 #include "holberton.h"
-#include <stdio.h>
-
 /**
- * print_array - prints n elements in the array a
- * @a: array to print
- * @n: number of elements to print
- *
- * Return: void
+ *_strcpy - Write a function that copies the string pointed to by src
+ *@dest: pointer char void
+ *@src: pointer char source
+ *Return: dest data
  */
-void print_array(int *a, int n)
+char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int i, j = 0;
 
-	while (i < n)
+	while (src[j])
+		j++;
+
+	for (i = 0; i <= j; i++)
 	{
-		printf("%d", a[i]);
-		if (i < (n - 1))
-			printf(", ");
-		i++;
+		dest[i] = src[i];
 	}
-	printf("\n");
+
+	return (dest);
 }
