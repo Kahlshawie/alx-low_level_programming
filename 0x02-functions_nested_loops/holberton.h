@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H_
-#define HOLBERTON_H_
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 
 
@@ -12,7 +12,7 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int _putchar(char c)
+int _putchar(char c);
 
 
 #endif 
