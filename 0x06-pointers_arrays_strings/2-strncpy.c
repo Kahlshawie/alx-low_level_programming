@@ -1,27 +1,25 @@
 #include "holberton.h"
 /**
-* _strncat- Copy str to dest
-* @n: Number of bytes to use max
-* @dest: String to copied to
-* @src: String to be copied to dest
-* Return: Always 0.
+* *_strncpy - find the length of a string
+* @dest: pointer to the string
+* @src: pointer
+* @n: int
+* Return: destination
 */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	char *origin = dest;
-	int counter = 0;
+	int i = 0;
 
-	while (*dest != '\0')
-		dest++;
-
-	while (counter < n && *src != '\0')
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-		counter++;
+	dest[i] = src[i];
 	}
-	*dest = '\0';
-	return (origin);
+
+	for ( ; i < n; i++)
+	{
+	dest[i] = '\0';
+	}
+
+	return (dest);
 }
